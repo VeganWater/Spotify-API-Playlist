@@ -1,0 +1,22 @@
+﻿@model SpotifyWebAPI.Models.LoginData
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Spotify Login</h1>
+
+<div class="container">
+    <label>Client ID:</label>
+    <br />
+    @Html.TextBoxFor(model => model.clientId)
+    <br />
+    <label>Client Secret:</label>
+    <br />
+    @Html.TextBoxFor(model => model.clientSecret)
+    <br />
+    <br />
+    <input type="button" onclick="document.location.href ='@Url.Action("","Playlist")'" value="Login" />
+</div>
+
+
